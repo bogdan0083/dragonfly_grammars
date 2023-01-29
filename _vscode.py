@@ -8,7 +8,7 @@ keyboard = Controller()
 
 def search_everywhere():
     with keyboard.pressed(Key.shift, Key.cmd_l):
-        keyboard.press("f")
+        keyboard.prs("f")
 
 
 def replace_everywhere():
@@ -59,12 +59,13 @@ def open_symbol():
     with keyboard.pressed(Key.cmd_l):
         keyboard.press("t")
 
+
 def rename_symbol():
     keyboard.press(Key.f2)
 
+
 def jump_to_letter():
-    with keyboard.pressed(Key.alt_l):
-        keyboard.press("/")
+    keyboard.press(Key.f3)
 
 
 vscode_context = AppContext(executable="electron")

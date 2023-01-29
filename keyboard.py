@@ -50,6 +50,7 @@ def cancel_and_sleep(text=None, text2=None):
 specialCharMap = {
     "(bar|vertical bar|pipe)": "|",
     "(dash|minus|hyphen)": "-",
+
     "dit": ".",
     "comma": ",",
     "backslash": "\\",
@@ -135,8 +136,8 @@ letterMap = {
     "(november|noy) ": "n",
     "(Oscar|osh) ": "o",
     "(papa|poppa) ": "p",
-    "(quebec) ": "q",
-    "(romeo)": "r",
+    "(quebec|queue)": "q",
+    "(romeo|rome)": "r",
     "(sierra|sun) ": "s",
     "(tango|tarnish) ": "t",
     "(urge) ": "u",
@@ -366,6 +367,7 @@ class KeystrokeRule(MappingRule):
         Choice("modifier2", modifierMap),
         Choice("modifierSingle", singleModifierMap),
         Choice("pressKey", pressKeyMap),
+        
     ]
     defaults = {
         "n": 1,
